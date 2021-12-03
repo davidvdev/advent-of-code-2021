@@ -1,7 +1,7 @@
 const fs = require("fs")
 
 // create an array that contains all of the input depths
-const pings = fs.readFileSync("./puzzle-1-input.txt").toString().split("\n")
+const pings = fs.readFileSync("./input.txt").toString().split("\n")
 
 // Part 1
 const logOne = {
