@@ -3,9 +3,6 @@ const fs = require("fs")
 // create an array that contains all of the input depths
 const pings = fs.readFileSync("./puzzle-1-input.txt").toString().split("\n")
 
-// create variables to store number of times number increased and decreased
-// loop over the array, starting at position 1, checking if the proceeding number is higher or lower
-// increment the appropriate variable
 const log = {
     inc: 0,
     dec: 0,
@@ -14,11 +11,13 @@ const log = {
 
 for (let i = 0; i < pings.length - 1; i++){
     const j = i+1
-    if (pings[i] == pings[j]){
+    const numI = Number(pings[i])
+    const numJ = Number(pings[j])
+    if (numI == numJ){
         log.same++
-    } else if (pings[i] > pings[j]){
+    } else if (numI > numJ){
         log.dec++
-    } else if (pings[i] < pings[j]){
+    } else if (numI < numJ){
         log.inc++
     }
 }
