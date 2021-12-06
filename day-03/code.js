@@ -43,18 +43,30 @@ console.log(powerUsed)
 // what is the value of gammaArr[0]? keep items from diagnostic that start with that num
 // what is the value of gammaArr[1]? keep items from current list that contain that num in position [1]
 const oxygenRating = () => {
-    const oxygenArr = diagnostic.filter(num => num[0] == gammaArr[0])
-    .filter(num => num[1] == gammaArr[1])
-    .filter(num => num[2] == gammaArr[2])
-    .filter(num => num[3] == gammaArr[3])
-    .filter(num => num[4] == gammaArr[4])
-    .filter(num => num[5] == gammaArr[5])
-    .filter(num => num[6] == gammaArr[6])
-    .filter(num => num[7] == gammaArr[7])
-    .filter(num => num[8] == gammaArr[8])
-    .filter(num => num[9] == gammaArr[9])
-    .filter(num => num[10] == gammaArr[10])
+    // const oxygenArr = diagnostic.filter(num => num[0] == gammaArr[0])
+    // .filter(num => num[1] == gammaArr[1])
+    // .filter(num => num[2] == gammaArr[2])
+    // .filter(num => num[3] == gammaArr[3])
+    // .filter(num => num[4] == gammaArr[4])
+    // .filter(num => num[5] == gammaArr[5])
+    // .filter(num => num[6] == gammaArr[6])
+    // .filter(num => num[7] == gammaArr[7])
+    // .filter(num => num[8] == gammaArr[8])
+    // .filter(num => num[9] == gammaArr[9])
+    // .filter(num => num[10] == gammaArr[10])
     // .filter(num => num[11] == gammaArr[11])
+
+    const oxygenArr = []
+    diagnostic.forEach(item =>{
+        item.forEach((digit, index) => {
+            switch (digit) {
+                case gammaArr[index]:
+                    return true
+                default:
+                    return false
+            }
+        })
+    })
 
     console.log('o2: ', oxygenArr)
     return oxygenArr
