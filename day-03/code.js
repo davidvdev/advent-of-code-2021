@@ -57,16 +57,16 @@ const oxygenRating = () => {
     // .filter(num => num[11] == gammaArr[11])
 
     const oxygenArr = []
-    diagnostic.forEach(item =>{
-        item.forEach((digit, index) => {
-            switch (digit) {
-                case gammaArr[index]:
-                    return true
-                default:
-                    return false
-            }
-        })
-    })
+    // diagnostic.forEach(item =>{
+    //     item.forEach((digit, index) => {
+    //         switch (digit) {
+    //             case gammaArr[index]:
+    //                 return true
+    //             default:
+    //                 return false
+    //         }
+    //     })
+    // })
 
     console.log('o2: ', oxygenArr)
     return oxygenArr
