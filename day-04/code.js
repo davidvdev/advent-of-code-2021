@@ -14,7 +14,7 @@ for (let i = 0; i < boardsUnOrg.length; i += 5){
         boardsUnOrg[i + 1],
         boardsUnOrg[i + 2],
         boardsUnOrg[i + 3],
-        boardsUnOrg[i + 4],
+        boardsUnOrg[i + 4]
     ])
 }
     // array method that works in 5 step increments
