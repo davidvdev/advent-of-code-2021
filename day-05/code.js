@@ -11,4 +11,23 @@ const points = data.map(line =>{
     return coordLine
 })
 
-console.log(points)
+const partOne = () => {
+
+}
+
+const isOrthoAdj = () => {
+    const coords = points[0]
+    if (coords[0].x == coords[1].x){
+        return('x is equal')
+    }
+    if (coords[0].y == coords[1].y){
+        return('y is equal')
+    }
+    if (coords[0].x != coords[1].x && coords[0].y != coords[1].y) {
+        return(null)
+    }  
+}
+
+partOne()
+console.log(points[0].push(isOrthoAdj()))
+console.log(points[0])
